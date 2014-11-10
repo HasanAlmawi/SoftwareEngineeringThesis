@@ -1,4 +1,4 @@
-Ch3::Application.routes.draw do
+Schulich::Application.routes.draw do
   resources :users
 
   root to: 'static_pages#home'
