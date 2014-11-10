@@ -1,11 +1,15 @@
+<% provide(:title, 'Home') %>
 <div class="center hero-unit">
-	<h1>Welcome to the Sample App</h1>
+	<h1>Welcome to the Schulich Round Attendance System</h1>
 
 	<h2>
-		This is the home page! Welcome!
+		You may sign up by clicking below.
 	</h2>
 
 	<%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
 </div>
 
-<%= link_to image_tag("rails.png", alt: "Rails"), "http://rubyonrails.org/" %>
+<%= link_to image_tag("schulich.png", alt: "Schulich"), "http://www.schulich.uwo.ca/" %>
+<div style="float: right;">
+	<%= link_to image_tag("western.png", alt: "Western"), "http://www.uwo.ca/" %>
+</div>
