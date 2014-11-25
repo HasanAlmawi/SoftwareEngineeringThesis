@@ -5,6 +5,8 @@ schulich.png: schulich-39efed07c62f2ac965bf91f66cb5b300.png
 schulich/index.png: schulich-39efed07c62f2ac965bf91f66cb5b300.png
 western.png: western-d4cb2f1095dfd3bc50f76b1bb3d51590.png
 western/index.png: western-d4cb2f1095dfd3bc50f76b1bb3d51590.png
+application.js: application-a4e5781b398195da905191a092920ee0.js
+application/index.js: application-a4e5781b398195da905191a092920ee0.js
 application.css: application-2ebc47645d0dbfab2f51683f4383f139.css
 application/index.css: application-2ebc47645d0dbfab2f51683f4383f139.css
 jquery.min.map: jquery.min-c5a89be96c8d2def857e2657b2c155c0.map
