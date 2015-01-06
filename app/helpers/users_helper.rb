@@ -1,6 +1,6 @@
 require 'identicon'
 module UsersHelper
-	#Returns the Gravatar (http://gravatar.com/) for the given user
+	#Returns the identicon for the given user
 	def identicon_for(user)
 		####This is the code for gravatars
 		#gravatar_id = Digest::MD5::hexdigest(user.email.downcase)

@@ -1,0 +1,18 @@
+<% provide(:title, 'Test Event') %>
+<h1>Attendance Registration</h1>
+
+<div class="row">
+	<div class="span6 offset3">
+	  <%= form_for(@attendance) do |f| %>
+	  	<%= render 'shared/attendance_error_messages' %>
+
+		<%= f.label :email %>
+		<%= f.text_field :email %>
+
+		<%= f.label :code %>
+		<%= f.text_field :code %>
+
+		<%= f.submit "Submit", class: "btn btn-large btn-primary" %>
+	  <% end %>
+	</div>
+</div>

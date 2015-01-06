@@ -13,6 +13,9 @@ class User < ActiveRecord::Base
   attr_accessible :email, :name, :password, :password_confirmation
   has_secure_password
   
+  has_many :attendances
+  accepts_nested_attributes_for :attendances
+
   before_save { |user| user.email = email.downcase }
   before_save :create_remember_token
 
@@ -25,5 +28,5 @@ class User < ActiveRecord::Base
   private
 	  def create_remember_token
   		self.remember_token = SecureRandom.urlsafe_base64
-  	  end
+  	end
 end

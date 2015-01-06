@@ -92,7 +92,15 @@ footer{
 	small{
 		float: left;
 	}
-	ul{
+	ull{
+		float: left;
+		list-style: none;
+		li{
+			float: left;
+			margin-left: 10px;		
+		}
+	}
+	ulr{
 		float: right;
 		list-style: none;
 		li{
