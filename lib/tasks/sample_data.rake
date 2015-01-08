@@ -9,5 +9,7 @@ namespace :db do
 			password = "password"
 			User.create!(name: name, email: email, password: password, password_confirmation: password)
 		end
+		Event.create!(title: "Example", lecturer: "Fai Kenayem", code: "ABC")
+		Event.create!(title: "Guide to Getting Facebook Likes", lecturer: "Hasan Almawi", code: "BSB")
 	end
 end

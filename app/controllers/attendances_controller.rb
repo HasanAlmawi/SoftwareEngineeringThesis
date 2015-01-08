@@ -9,7 +9,7 @@ class AttendancesController < ApplicationController
     @attendance = Attendance.new
     if user
       if event
-        @attendance = user.attendances.build(params[:attendance].except(:email).except(:code))  	
+        @attendance = user.attendances.build(params[:attendance].except(:email))  	
     	  if @attendance.save
           flash[:success] = "Attendance logged."
     		  redirect_to root_path
