@@ -17,11 +17,11 @@ class AttendancesController < ApplicationController
           render 'new'
         end
       else
-        flash.now[:codefail] = "Event not found."
+        flash.now[:alert] = "Event not found."
         render 'new'
       end
   	else
-      flash.now[:userfail] = "User not found."
+      flash.now[:alert] = "User not found."
   		render 'new'
   	end
   end
