@@ -10,7 +10,7 @@
 		<%= f.text_field :email %>
 
 		<%= f.label :code %>
-		<%= f.text_field :code %>
+		<%= f.text_field :code, :autocomplete => :off %>
 
 		<%= f.submit "Submit", class: "btn btn-large btn-primary" %>
 	  <% end %>
