@@ -17,12 +17,25 @@ class AttendancesController < ApplicationController
           render 'new'
         end
       else
-        flash.now[:alert] = "Event not found."
+        flash.now[:error] = "Event not found."
         render 'new'
       end
   	else
-      flash.now[:alert] = "User not found."
+      flash.now[:error] = "User not found."
   		render 'new'
   	end
+  end
+
+  def destroy
+    Attendance.find(params[:code]).destroy
+  end
+
+  def index
+    @attendances = Attendance.order(:code)
+    respond_to do |format|
+      format.html
+      format.csv { send_data @attendances.to_csv }
+      format.xls { send_data @attendances.to_csv(col_sep: "\t") }
+    end    
   end
 end

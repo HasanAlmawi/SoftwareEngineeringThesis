@@ -2,4 +2,27 @@ class EventsController < ApplicationController
   def new
   	@event = Event.new
   end
+
+  def create
+  	@event = Event.new(params[:event])
+  	if @event.save
+  		flash[:success] = "Event created."
+  		redirect_to root_path
+  	else
+  		render 'new'
+  	end
+  end
+
+  def update
+    if @event.update_attributes(params[:event])
+      flash[:success] = "Event updated"
+      redirect_to root_path
+    else
+      render 'new'
+    end
+  end
+
+  def destroy
+    Attendance.find(params[:code]).destroy
+  end
 end

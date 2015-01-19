@@ -5,7 +5,6 @@ gem 'bootstrap-sass', '2.0.0'
 gem 'bcrypt-ruby', '3.0.1'
 gem 'faker', '1.0.1'
 gem 'identicon'
-gem 'polymer', '~> 1.0.0.beta.7'
 
 group :development, :test do
 	gem 'sqlite3'

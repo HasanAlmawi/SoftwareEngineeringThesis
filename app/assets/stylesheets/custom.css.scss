@@ -157,6 +157,11 @@ input, textarea, select, .uneditable-input {
 	}
 }
 
+#error {
+	background-color: #F0A8A8; 
+	border: 1px solid #900; 
+}
+
 .field_with_errors {
 	@extend .control-group;
 	@extend .error;
