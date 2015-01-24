@@ -1,0 +1,79 @@
+<html>
+	<head>
+		<title> Schulich Logging System </title>
+		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/dist/css/ripples.min.css" rel="stylesheet">
+        <link href="/dist/css/material-wfont.min.css" rel="stylesheet">
+        <link href="/dist/css/custom.css" rel="stylesheet">
+        <link rel="icon" href="https://www.uwo.ca/web_standards/img/logo/crest-stack-3.png" type="image/x-icon">
+	</head>
+	<body>
+		<div class="navbar navbar-material-deeppurple">
+		</div>
+		<div id="images">
+			<!-- Western Image -->
+			<div id="img1">
+				<img src="http://i.imgur.com/yhLgAQY.png">
+			</div>
+			<!-- Schulich Image -->
+			<div id="img2">
+				<img src="http://i.imgur.com/z17Njld.png">
+			</div>
+		</div>
+		<div class="logInSignUp" vertical layout>
+			<div id="SignIn">
+				<!-- Email Input -->
+				<div id="EmailIn" class="textInput" flex>
+					<input type="text" class="form-control floating-label" placeholder="Email">
+				</div>
+				<!-- Password Input -->
+				<div id="PassIn" class="textInput" flex>
+					<input type="text" class="form-control floating-label" placeholder="Password">
+				</div>
+				<!-- Checkbox for remember -->
+				<div class="row">
+					<span class="checkbox" id="rememberMe">
+					    <label> <input type="checkbox"> Remember Me </label>
+					</span>
+					<!-- Sign In Button -->
+					<span id="buttonIn">
+						<button class="btn btn-material-deeppurple btn-raised">Sign In</button>
+					</span>
+				</div>
+			</div>
+			<div id="SignUp">
+				<!-- First Name Input -->
+				<div id="fNameUp" class="textInput">
+					<input type="text" class="form-control floating-label" placeholder="First Name">
+				</div>
+				<!-- Last Name Input -->
+				<div id="lNameUp" class="textInput">
+					<input type="text" class="form-control floating-label" placeholder="Last Name">
+				</div>
+				<!-- Email Input -->
+				<div id="EmailUp" class="textInput">
+					<input type="text" class="form-control floating-label" placeholder="Email">
+				</div>
+				<!-- Password Input -->
+				<div id="passUp" class="textInput">
+					<input type="text" class="form-control floating-label" placeholder="Password">
+				</div>
+				<!-- Sign Up Button -->
+				<div id="buttonUp">
+					<button class="btn btn-material-lightyellow btn-raised btn-style">Sign Up</button>
+				</div>
+			</div>
+		</div>
+		<!-- -->
+		 <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+        <script src="dist/js/ripples.min.js"></script>
+        <script src="dist/js/material.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $.material.init();
+            });
+        </script>
+	</body>
+<html>

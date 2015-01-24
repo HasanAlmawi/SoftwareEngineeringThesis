@@ -1,0 +1,207 @@
+<html>
+	<head>
+		<title> Home </title>
+		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/dist/css/ripples.min.css" rel="stylesheet">
+        <link href="/dist/css/material-wfont.min.css" rel="stylesheet">
+        <link href="/dist/css/custom.css" rel="stylesheet">
+        <link rel="icon" href="https://www.uwo.ca/web_standards/img/logo/crest-stack-3.png" type="image/x-icon">
+	</head>
+	<body>
+        <div class="navbar navbar-material-deeppurple">
+             <div class="navbar-collapse collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav">
+                    <li  class="active">
+                        <a href="javascript:void(0)">
+                            <div class="icon-preview"><i class="mdi-action-home"> Home</i></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <div class="icon-preview"><i class="mdi-action-list"> History</i></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <div class="icon-preview"><i class="mdi-action-settings"> Settings</i></div>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="javascript:void(0)">
+                            <div class="icon-preview>"><i class="mdi-action-settings-power"> Logout</i></div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="calendar">
+            <div id="month">
+                <ul class="pager">
+                    <li><a href="javascript:void(0)">Previous</a></li>
+                    <li> January </li>
+                    <li><a href="javascript:void(0)">Next</a></li>
+                </ul>
+            </div>
+            <span class="panel panel-material-deeppurple" style="float: left; margin-right: 1px;">
+                <div class="panel-heading" style="position: relative;">
+                    <h3 class="panel-title" style="float: center">Sunday</h3>
+                </div>
+                <div class="panel-body" id="day" data-toggle="modal" data-target="#simple-dialog"> 28 </div>
+                <div class="panel-body" id="day"> 4 </div>
+                <div class="panel-body" id="day"> 11 </div>
+                <div class="panel-body" id="day"> 18 </div>
+                <div class="panel-body" id="day"> 25 </div>
+            </span>
+            <span class="panel panel-material-deeppurple" style="float: left; margin-right: 1px;">
+                <div class="panel-heading" style="position: relative;">
+                    <h3 class="panel-title" style="float: center">Monday</h3>
+                </div>
+                <div class="panel-body" id="day"> 29 </div>
+                <div class="panel-body" id="day"> 5 </div>
+                <div class="panel-body" id="day"> 12 </div>
+                <div class="panel-body" id="day"> 19 </div>
+                <div class="panel-body" id="day"> 26 </div>
+            </span>
+            <span class="panel panel-material-deeppurple" style="float: left; margin-right: 1px;">
+                <div class="panel-heading" style="position: relative;">
+                    <h3 class="panel-title" style="float: center">Tuesday</h3>
+                </div>
+                <div class="panel-body" id="day"> 30 </div>
+                <div class="panel-body" id="day"> 6 </div>
+                <div class="panel-body" id="day"> 13 </div>
+                <div class="panel-body" id="day"> 20 </div>
+                <div class="panel-body" id="day"> 27 </div>
+            </span>
+            <span class="panel panel-material-deeppurple" style="float: left; margin-right: 1px;">
+                <div class="panel-heading" style="position: relative;">
+                    <h3 class="panel-title" style="float: center">Wednesday</h3>
+                </div>
+                <div class="panel-body" id="day"> 31 </div>
+                <div class="panel-body" id="day"> 7 </div>
+                <div class="panel-body" id="day"> 14 </div>
+                <div class="panel-body" id="day"> 21 </div>
+                <div class="panel-body" id="day"> 28 </div>
+            </span>
+            <span class="panel panel-material-deeppurple" style="float: left; margin-right: 1px;">
+                <div class="panel-heading" style="position: relative;">
+                    <h3 class="panel-title" style="float: center">Thursday</h3>
+                </div>
+                <div class="panel-body" id="day"> 1 </div>
+                <div class="panel-body" id="day"> 8 </div>
+                <div class="panel-body" id="day"> 15 </div>
+                <div class="panel-body" id="day"> 22 </div>
+                <div class="panel-body" id="day"> 29 </div>
+            </span>
+            <span class="panel panel-material-deeppurple" style="float: left; margin-right: 1px;">
+                <div class="panel-heading" style="position: relative;">
+                    <h3 class="panel-title" style="float: center">Friday</h3>
+                </div>
+                <div class="panel-body" id="day"> 2 </div>
+                <div class="panel-body" id="day"> 9 </div>
+                <div class="panel-body" id="day"> 16 </div>
+                <div class="panel-body" id="day"> 23 </div>
+                <div class="panel-body" id="day"> 30 </div>
+            </span>
+            <span class="panel panel-material-deeppurple" style="float: left; margin-right: 1px;">
+                <div class="panel-heading" style="position: relative;">
+                    <h3 class="panel-title" style="float: center">Saturday</h3>
+                </div>
+                <div class="panel-body" id="day"> 3 </div>
+                <div class="panel-body" id="day"> 10 </div>
+                <div class="panel-body" id="day"> 17 </div>
+                <div class="panel-body" id="day"> 24 </div>
+                <div class="panel-body" id="day"> 31 </div>
+            </span>
+        </div>
+        <div id="upcomingEvents">
+            <div class="panel panel-material-deeppurple">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Upcoming Events</h3>
+                </div>
+                <div class="panel-body">
+                    Event
+                </div>
+            </div>
+        </div>
+        <div id="input">
+            <div class="panel panel-material-deeppurple">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Add Event</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <input class="form-control floating-label" id="focusedInput" type="text" placeholder="Input key" data-hint="Key form: XX123">
+                    </div>
+                    <button class="btn btn-material-lightgreen" style="float: right;">Confirm</button>
+                </div>
+            </div>
+        </div>
+        <div id="simple-dialog" class="modal fade" tabindex="-1">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+                <form class="form-horizontal">
+                    <fieldset>
+                        <div class="form-group" id="accountChange">
+                            <div class="accElement">
+                                <label class="col-lg-2 control-label" style="position: relative; margin-top: 2%;"> Lecture </label>
+                                <div class="col-lg-10" style="position: relative; margin-top: 2%;">
+                                    <div id="newFN">
+                                        <input type="text" class="form-control floating-label" placeholder="Event Name">
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary btn-flat"><i class="mdi-navigation-check"></i> Ok</button>
+                                <button class="btn btn-default btn-flat"><i class="mdi-navigation-close"></i> Cancel</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+		<!-- -->
+        <style>
+            #upcomingEvents{
+                position: relative;
+                float: left;
+                margin-left: 17%;
+                margin-top: 10%;
+            }
+            #input{
+                position: relative;
+                float: left;
+                margin-top: 2%;
+                margin-left: 17%;
+            }
+            .week{
+                position: relative;
+                margin-top: 2%;
+            }
+            #day{
+                position: relative;
+                width:110px;
+                height:75px;
+                background-color:#E3E3E3;
+            }
+            #calendar{
+                position: relative;
+                float: left;
+                margin-left: 7%;
+                margin-top: 2%;
+            }
+        </style>
+		<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+        <script src="dist/js/ripples.min.js"></script>
+        <script src="dist/js/material.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $.material.init();
+            });
+        </script>
+	</body>
+</html>
