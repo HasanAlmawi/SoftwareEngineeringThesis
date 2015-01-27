@@ -1,24 +1,81 @@
-<% provide(:title, 'Sign up') %>
-<h1>Sign up</h1>
+<% provide(:title, 'Log In') %>
 
-<div class="row">
-	<div class="span6 offset3">
-	  <%= form_for(@user) do |f| %>
-	  	<%= render 'shared/user_error_messages' %>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="/assets/ripples.min.css" rel="stylesheet">
+<link href="/assets/material-wfont.min.css" rel="stylesheet">
+<link href="/assets/custom.css" rel="stylesheet">
+<!--THIS IS THE HEADER
+<div class="navbar navbar-material-deeppurple">
+</div>-->
+<div id="images">
+	<!-- Western Image -->
+	<div id="img1">
+		<%= link_to image_tag("western.png", alt: "Western"), "http://www.uwo.ca/" %>
+	</div>
 
-		<%= f.label :name %>
-		<%= f.text_field :name, :autocomplete => :off %>
-
-		<%= f.label :email %>
-		<%= f.text_field :email, :autocomplete => :off %>
-
-		<%= f.label :password %>
-		<%= f.password_field :password %>
-
-		<%= f.label :password_confirmation, "Confirmation" %>
-		<%= f.password_field :password_confirmation %>
-
-		<%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
-	  <% end %>
+	<!-- Schulich Image -->
+	<div id="img2">
+		<%= link_to image_tag("schulich.png", alt: "Schulich"), "http://www.schulich.uwo.ca/" %>	
 	</div>
 </div>
+
+<div class="logInSignUp" vertical layout>
+  <%= form_for(:session, url: sessions_path) do |f| %> 
+	<div id="SignIn">
+		<!-- Email Input -->
+		<div id="EmailIn" class="textInput" flex>
+			<%= f.text_field :email, class: "form-control floating-label", placeholder: "Email" %>
+		</div>
+		<!-- Password Input -->
+		<div id="PassIn" class="textInput" flex>
+			<%= f.password_field :password, class: "form-control floating-label", placeholder: "Password" %>
+		</div>
+		<!-- Checkbox for remember -->
+		<div class="row">
+			<span class="checkbox" id="rememberMe">
+			    <label> <input type="checkbox"> Remember Me </label>
+			</span>
+			<!-- Sign In Button -->
+			<span id="buttonIn">
+				<%= f.submit "Sign In", class: "btn btn-material-deeppurple btn-raised" %>
+			</span>
+		</div>
+	</div>
+  <% end %>
+  <%= form_for(@user) do |f| %>
+	<div id="SignUp">
+	  	<%= render 'shared/user_error_messages' %>
+		<!-- First Name Input -->
+		<div id="fNameUp" class="textInput">
+			<%= f.text_field :name, :autocomplete => :off, class: "form-control floating-label", placeholder: "Name" %>
+		</div>
+		<!-- Last Name Input -->
+		<div id="lNameUp" class="textInput">
+			<%= f.text_field :email, :autocomplete => :off, class: "form-control floating-label", placeholder: "Email" %>
+		</div>
+		<!-- Email Input -->
+		<div id="EmailUp" class="textInput">
+			<%= f.password_field :password, class: "form-control floating-label", placeholder: "Password" %>
+		</div>
+		<!-- Password Input -->
+		<div id="passUp" class="textInput">
+			<%= f.password_field :password_confirmation, class: "form-control floating-label", placeholder: "Password Confirmation" %>
+		</div>
+		<!-- Sign Up Button -->
+		<div id="buttonUp">
+			<%= f.submit "Sign Up", class: "btn btn-material-lightyellow btn-raised btn-style" %>
+		</div>	 
+	</div>
+  <% end %>  
+</div>
+
+<script type ="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<script type ="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<script src="/assets/ripples.js" type="text/javascript"></script>
+<script src="/assets/material.js" type="text/javascript"></script>
+<script>
+    $(document).ready(function() {
+        $.material.init();
+    });
+</script>
