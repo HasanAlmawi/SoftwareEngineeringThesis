@@ -14,6 +14,6 @@
 //= require jquery_ujs
 //= require bootstrap-dropdown
 //= require bootstrap
-//= require fullcalendar
 //= require moment
-//= require_tree .
+//= require fullcalendar
+//= require static_pages

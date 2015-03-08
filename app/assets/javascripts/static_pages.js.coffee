@@ -6,7 +6,7 @@
 $(document).ready ->  
   $("#calendar").fullCalendar(
     events: '/events.json'
-    
+
     header:
       left: 'prevYear nextYear',
       center: 'title',
