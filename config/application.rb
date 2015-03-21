@@ -64,7 +64,7 @@ module Schulich
     config.assets.initialize_on_precompile = false
 
     #MORE MAGIC
-    config.serve_static_assets = true
+    #config.serve_static_assets = true
 
   end
 end
