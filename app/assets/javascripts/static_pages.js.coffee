@@ -5,7 +5,13 @@
 #
 $(document).ready ->  
   $("#calendar").fullCalendar(
-    events: '/events.json'
+    eventSources: [
+      {
+        url: '/events.json',
+        color: 'purple',
+        textColor: 'white'
+      }
+    ]
 
     header:
       left: 'prevYear nextYear',
