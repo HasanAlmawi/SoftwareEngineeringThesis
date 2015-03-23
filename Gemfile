@@ -31,5 +31,4 @@ end
 
 group :production do
 	gem 'pg', '0.12.2'
-	gem 'ruby', '1.9.3'
 end
