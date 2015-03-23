@@ -65,6 +65,7 @@ module Schulich
 
     #MORE MAGIC
     #config.serve_static_assets = true
-
+    #But I took it out... this isn't Hogwarts
+    #Also it was messing up my asset pipeline
   end
 end
