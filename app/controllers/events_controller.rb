@@ -3,7 +3,7 @@ class EventsController < ApplicationController
 
   def index
     @events = Event.all
-    respond_with(@data)
+    respond_with(@events)
   end
 
   def new
