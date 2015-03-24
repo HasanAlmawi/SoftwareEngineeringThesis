@@ -23,7 +23,8 @@ $(document).ready ->
       nextYear: 'Next Year'
 
     dayClick: ->
-      alert 'Day clicked!'
+      $('#mTitle').html 
+      $('#eventModal').modal()
 
     eventClick: (event, jsEvent, view) ->
       $('#modalTitle').html event.title

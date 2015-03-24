@@ -17,4 +17,3 @@ admin.toggle!(:admin)
 end
 Event.create!(title: "Social Guidelines", lecturer: "Fai Kenayem", code: "ABC", description: "A guide to making friends and influencing people.", start_time: "10/3/2015 12:00:00 AM", end_time: "10/3/2015 12:00:00 AM")
 #Event.create!(title: "Guide to Getting Facebook Likes", lecturer: "Hasan Almawi", code: "BSB")
-
