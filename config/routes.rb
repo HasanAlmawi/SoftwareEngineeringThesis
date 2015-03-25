@@ -5,6 +5,7 @@ Schulich::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   resources :events
   resources :attendances
+  resources :faculties
 
   root to: 'static_pages#home'
 

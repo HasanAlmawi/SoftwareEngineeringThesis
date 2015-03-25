@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(:version => 20150308175416) do
   create_table "events", :force => true do |t|
     t.string   "title"
     t.string   "lecturer"
+    t.string   "faculty"
     t.string   "code"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
