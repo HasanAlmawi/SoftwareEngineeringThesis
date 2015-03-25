@@ -31,4 +31,6 @@ if Rails.env.production?
 		User.create!(name: name, email: email, password: password, password_confirmation: password)
 	end
 	Event.create!(title: "Social Guidelines", lecturer: "Fai Kenayem", code: "ABC", description: "A guide to making friends and influencing people.", start_time: "10/3/2015 12:00:00 AM", end_time: "10/3/2015 12:00:00 AM")
+	Event.create!(title: "Guide to getting Facebook likes", lecturer: "Hasan Almawi", code: "FBL", description: "How to be the coolest person amongst all you friends.", start_time: "26/3/2015 1:30:00 PM", end_time: "26/3/2015 2:30:00 PM")
+	Event.create!(title: "Ruby on Rails coding session", lecturer: "Alex Payne", code: "ROR", description: "A guide to coding in Ruby on Rails.", start_time: "21/3/2015 9:00:00 PM", end_time: "23/3/2015 9:00:00 PM")
 end
