@@ -1,9 +1,9 @@
-<header class="navbar navbar-fixed-top">
-	<div class="navbar-inner">
+<header>
+	<div>
 		<div class="container">
 			<%= link_to "Schulich Attendance", root_path, id: "logo" %>
 			<nav>
-				<ul class="nav pull-right">
+				<ul>
 					<li><%= link_to "Home", root_path %></li>
 					<li><%= link_to "Log Attendance", register_path %></li>
 
@@ -11,8 +11,7 @@
 						<% if current_user.admin? %>
 							<li><%= link_to "Users", users_path %></li>
 						<% end %>
-						<li><%= link_to "Profile", current_user %></li>
-						<li><%= link_to "Edit Information", edit_user_path(current_user) %></li>
+						<li><%= link_to "Settings", edit_user_path(current_user) %></li>
 						<li><%= link_to "Sign Out", signout_path, method: "delete" %></li>
 					<% end %>
 				</ul>
