@@ -1,18 +1,30 @@
 <% provide(:title, 'Test Event') %>
-<h1>Attendance Registration</h1>
+<link href="/assets/ripples.css" rel="stylesheet">
+<link href="/assets/material-wfont.css" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+<script src="//code.jquery.com/jquery-1.8.3.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
-<div class="row">
-	<div class="span6 offset3">
+<script src="/assets/ripples.js" type="text/javascript"></script>
+<script src="/assets/material.js" type="text/javascript"></script>
+
+<h1 class="visible-lg-block">Attendance Registration</h1>
+<h2 class="visible-md-block">Attendance Registration</h2>
+<h3 class="visible-sm-block">Attendance Registration</h3>
+<h4 class="visible-xs-block">Attendance Registration</h4>
+<div class="row-fluid">
 	  <%= form_for(@attendance) do |f| %>
 	  	<%= render 'shared/attendance_error_messages' %>
-
+	<div class="span12">
 		<%= f.label :email %>
 		<%= f.text_field :email %>
-
+	</div>
+	<div class="span12">
 		<%= f.label :code %>
 		<%= f.text_field :code, :autocomplete => :off %>
-
-		<%= f.submit "Submit", class: "btn btn-large btn-primary" %>
-	  <% end %>
 	</div>
+	<div class="span12">
+		<%= f.submit "Submit", class: "btn btn-large btn-primary" %>
+	</div>
+	<% end %>
 </div>

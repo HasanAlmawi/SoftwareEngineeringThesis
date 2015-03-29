@@ -4626,8 +4626,8 @@ legend {
 }
 .navbar .navbar-nav > li > a {
   color: rgba(255, 255, 255, 0.84);
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .navbar .navbar-nav > li > a:hover,
 .navbar .navbar-nav > li > a:focus {
@@ -4861,8 +4861,8 @@ fieldset[disabled] .navbar .btn-link:focus {
     margin-top: 10px;
   }
   .navbar .navbar-nav > li > a {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 .dropdown-menu {
