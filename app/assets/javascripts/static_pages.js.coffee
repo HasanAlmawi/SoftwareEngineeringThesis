@@ -30,7 +30,8 @@ $(document).ready ->
 
     eventRender: (event, element) ->
       element.attr 'href', 'javascript:void(0);'
-      element.click -> 
+      element.click ->
+        window.alert(event.code) 
         $('#eventCode').html event.code
         $('#speaker').html event.lecturer
         $('#facEvent').html event.faculty
