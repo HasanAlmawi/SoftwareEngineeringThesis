@@ -1,27 +1,45 @@
-<% provide(:title, "Edit user") %>
-<h1>Update your profile</h1>
+<% provide(:title, 'Edit user') %>
+<link href="/assets/ripples.css" rel="stylesheet">
+<link href="/assets/material-wfont.css" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+<script src="//code.jquery.com/jquery-1.8.3.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
-<div class="row">
-	<div class="span6 offset3">
-		<%= form_for(@user) do |f| %>
-			<%= render 'shared/user_error_messages' %>
+<script src="/assets/ripples.js" type="text/javascript"></script>
+<script src="/assets/material.js" type="text/javascript"></script>
 
-			<%= f.label :name %>
-			<%= f.text_field :name %>
-
-			<%= f.label :email %>
-			<%= f.text_field :email %>
-
-			<%= f.label :password %>
-			<%= f.password_field :password %>
-
-			<%= f.label :password_confirmation, "Confirm Password" %>
-			<%= f.password_field :password_confirmation %>
-
-			<%= f.label :star_username, "Star Username" %>
-			<%= f.text_field :star_username %>
-
-			<%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
-		<% end %>
+<h1 class="visible-lg-block" align="center">Settings</h1>
+<h2 class="visible-md-block" align="center">Settings</h2>
+<h3 class="visible-sm-block" align="center">Settings</h3>
+<h4 class="visible-xs-block" align="center">Settings</h4>
+<div class="row-fluid">
+	<%= form_for(@user) do |f| %>
+		<%= render 'shared/user_error_messages' %>
+	<div class="span12" style="padding-top: 10px;">
+		<%= f.label :name %>
+		<%= f.text_field :name, class: "form-control floating-label" %>
 	</div>
+	<div class="span12" style="padding-top: 10px;">
+		<%= f.label :email %>
+		<%= f.text_field :email, class: "form-control floating-label" %>
+	</div>
+	<div class="span12" style="padding-top: 10px;">
+		<%= f.label :password %>
+		<%= f.password_field :password, class: "form-control floating-label" %>
+	</div>
+	<div class="span12" style="padding-top: 10px;">
+		<%= f.label :password_confirmation, "Confirm Password" %>
+		<%= f.password_field :password_confirmation, class: "form-control floating-label" %>
+	</div>
+	<div class="span12" style="padding-top: 10px;">
+		<%= f.label :star_username, "Star Username" %>
+		<%= f.text_field :star_username, class: "form-control floating-label" %>
+	</div>
+	<div class="span12" align="center" style="padding-top: 10px;">
+		<%= f.submit "Save changes", class: "btn btn-large btn-material-lightgreen visible-lg-block" %>
+		<%= f.submit "Save changes", class: "btn btn-md btn-material-lightgreen visible-md-block" %>
+		<%= f.submit "Save changes", class: "btn btn-sm btn-material-lightgreen visible-sm-block" %>
+		<%= f.submit "Save changes", class: "btn btn-xs btn-material-lightgreen visible-xs-block" %>
+	</div>
+	<% end %>
 </div>
