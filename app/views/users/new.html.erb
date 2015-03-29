@@ -13,64 +13,88 @@
 
 <div id="images">
 	<!-- Western Image -->
-	<div id="img1">
+	<div id="img1" class="hidden-xs">
 		<%= link_to image_tag("western.png", alt: "Western"), "http://www.uwo.ca/" %>
 	</div>
 
 	<!-- Schulich Image -->
-	<div id="img2">
+	<div id="img2" class="hidden-xs">
 		<%= link_to image_tag("schulich.png", alt: "Schulich"), "http://www.schulich.uwo.ca/" %>	
 	</div>
 </div>
 
 <div class="logInSignUp" vertical layout>
-  <%= form_for(:session, url: sessions_path) do |f| %> 
-	<div id="SignIn">
-		<!-- Email Input -->
-		<div id="EmailIn" class="textInput" flex>
-			<%= f.text_field :email, class: "form-control floating-label", placeholder: "Email" %>
+	<div class="accordion" id="accordion">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+				<button class="btn btn-material-deeppurple btn-flat accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+		        Sign In
+		      	</button>
+		    </div>
+		    <div id="collapseOne" class="accordion-body collapse in">
+		    	<div class="accordion-inner">
+				  	<%= form_for(:session, url: sessions_path) do |f| %> 
+					<div id="SignIn">
+						<!-- Email Input -->
+						<div id="EmailIn" class="textInput" flex>
+							<%= f.text_field :email, class: "form-control floating-label", placeholder: "Email" %>
+						</div>
+						<!-- Password Input -->
+						<div id="PassIn" class="textInput" flex>
+							<%= f.password_field :password, class: "form-control floating-label", placeholder: "Password" %>
+						</div>
+						<!-- Checkbox for remember -->
+						<div class="row">
+							<span class="checkbox" id="rememberMe">
+							    <label> <input type="checkbox"> Remember Me </label>
+							</span>
+							<!-- Sign In Button -->
+							<span id="buttonIn">
+								<%= f.submit "Sign In", class: "btn btn-material-deeppurple btn-raised" %>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<% end %>
 		</div>
-		<!-- Password Input -->
-		<div id="PassIn" class="textInput" flex>
-			<%= f.password_field :password, class: "form-control floating-label", placeholder: "Password" %>
+  	<div class="accordion-group">
+  		<div class="accordion-heading">
+				<button class="btn btn-material-deeppurple btn-flat accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+		        Sign Up
+		      	</button>
 		</div>
-		<!-- Checkbox for remember -->
-		<div class="row">
-			<span class="checkbox" id="rememberMe">
-			    <label> <input type="checkbox"> Remember Me </label>
-			</span>
-			<!-- Sign In Button -->
-			<span id="buttonIn">
-				<%= f.submit "Sign In", class: "btn btn-material-deeppurple btn-raised" %>
-			</span>
+		<div id="collapseTwo" class="accordion-body collapse">
+		    <div class="accordion-inner">
+				<%= form_for(@user) do |f| %>
+				<div id="SignUp">
+				  	<%= render 'shared/user_error_messages' %>
+					<!-- First Name Input -->
+					<div id="fNameUp" class="textInput">
+						<%= f.text_field :name, :autocomplete => :off, class: "form-control floating-label", placeholder: "Name" %>
+					</div>
+					<!-- Last Name Input -->
+					<div id="lNameUp" class="textInput">
+						<%= f.text_field :email, :autocomplete => :off, class: "form-control floating-label", placeholder: "Email" %>
+					</div>
+					<!-- Email Input -->
+					<div id="EmailUp" class="textInput">
+						<%= f.password_field :password, class: "form-control floating-label", placeholder: "Password" %>
+					</div>
+					<!-- Password Input -->
+					<div id="passUp" class="textInput">
+						<%= f.password_field :password_confirmation, class: "form-control floating-label", placeholder: "Password Confirmation" %>
+					</div>
+					<!-- Sign Up Button -->
+					<div id="buttonUp">
+						<%= f.submit "Sign Up", class: "btn btn-material-deeppurple btn-raised btn-style" %>
+					</div>	 
+				</div>
+				<% end %>
+			</div>
 		</div>
 	</div>
-  <% end %>
-  <%= form_for(@user) do |f| %>
-	<div id="SignUp">
-	  	<%= render 'shared/user_error_messages' %>
-		<!-- First Name Input -->
-		<div id="fNameUp" class="textInput">
-			<%= f.text_field :name, :autocomplete => :off, class: "form-control floating-label", placeholder: "Name" %>
-		</div>
-		<!-- Last Name Input -->
-		<div id="lNameUp" class="textInput">
-			<%= f.text_field :email, :autocomplete => :off, class: "form-control floating-label", placeholder: "Email" %>
-		</div>
-		<!-- Email Input -->
-		<div id="EmailUp" class="textInput">
-			<%= f.password_field :password, class: "form-control floating-label", placeholder: "Password" %>
-		</div>
-		<!-- Password Input -->
-		<div id="passUp" class="textInput">
-			<%= f.password_field :password_confirmation, class: "form-control floating-label", placeholder: "Password Confirmation" %>
-		</div>
-		<!-- Sign Up Button -->
-		<div id="buttonUp">
-			<%= f.submit "Sign Up", class: "btn btn-material-lightyellow btn-raised btn-style" %>
-		</div>	 
-	</div>
-  <% end %>  
+  </div>  
 </div>
 
 <script>
