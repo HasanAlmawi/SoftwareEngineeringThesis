@@ -45,9 +45,13 @@
                 <h4 id="mTitle" class="modal-title">Create Event</h4>
             </div>
             <div id="mBody" class="modal-body"> Do you want to create a new event? </div>
-            <div class="modal-footer">
-              <%= link_to "Yes", new_event_path, :class => "btn btn-primary" %>
-              <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+            <div class="row-fluid modal-footer">
+                <span class="span1" style="width:54px;" align="left">
+                    <%= link_to "Yes", new_event_path, :class => "btn btn-primary" %>
+                </span>
+                <span class="span1" style="width:54px;" align="right">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" style="top:5px;">No</button>
+                </span>
             </div>
         </div>
       </div>
@@ -56,14 +60,14 @@
     <div id="calendar"></div>
     <div class="modal fade" id="modal"></div>
 <% else %>
-    <div class="center hero-unit">
+    <div class="center hero-unit" align="center">
         <h1>Welcome to the Schulich Round Attendance System</h1>
 
         <h2>
             You may sign up or sign in by clicking below.
         </h2>
 
-        <%= link_to "Sign Up/Sign In", signup_path, class: "btn btn-large btn-primary" %>
+        <%= link_to "Sign Up/Sign In", signup_path, class: "btn btn-large btn-material-lightgreen" %>
     </div>
 
     <%= link_to image_tag("schulich.png", alt: "Schulich"), "http://www.schulich.uwo.ca/" %>
