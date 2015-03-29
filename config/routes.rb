@@ -10,6 +10,7 @@ Schulich::Application.routes.draw do
   root to: 'static_pages#home'
 
   match '/signup', to: 'users#new'
+  match '/edit', to: 'users#edit'
   
   match '/register', to: 'attendances#new'
 
