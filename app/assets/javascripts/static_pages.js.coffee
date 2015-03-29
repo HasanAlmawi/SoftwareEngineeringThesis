@@ -22,15 +22,24 @@ $(document).ready ->
       prevYear: 'Previous Year'
       nextYear: 'Next Year'
 
+    
     dayClick: ->
       $('#mTitle').html 
       $('#eventModal').modal()
+    
 
-    eventClick: (event, jsEvent, view) ->
-      $('#modalTitle').html event.title
-      $('#modalBody').html event.description
-      $('#eventUrl').attr 'href', event.url
-      $('#fullCalModal').modal()
+    eventRender: (event, element) ->
+      element.attr 'href', 'javascript:void(0);'
+      element.click -> 
+        $('#eventCode').html event.code
+        $('#speaker').html event.lecturer
+        $('#facEvent').html event.faculty
+        $('#modalTitle').html event.title
+        $('#modalBody').html event.description
+        $('#startTime').html moment(event.start).format('MMM Do h:mm A')
+        $('#endTime').html moment(event.end).format('MMM Do h:mm A')
+        $('#eventUrl').attr 'href', event.url
+        $('#fullCalModal').modal()
      
   )
 

@@ -18,6 +18,7 @@ class EventsController < ApplicationController
 
   def create
   	@event = Event.new(params[:event])
+    @event.code = SecureRandom.hex(2)
   	if @event.save
   		flash[:success] = "Event created."
   		redirect_to root_path
