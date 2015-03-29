@@ -2,6 +2,7 @@ class EventsController < ApplicationController
   respond_to(:json)
 
   def index
+    @event = Event.new
     @events = Event.all
     respond_with(@events)
   end
@@ -11,19 +12,8 @@ class EventsController < ApplicationController
   end
 
   def edit
-  end
-
-  def show
-    @event = Event.find(params[:id])
-  end
-  
-  def update
-    if @event.update_attributes(params[:event])
-      flash[:success] = "Event updated"
-      redirect_to root_path
-    else
-      render 'edit'
-    end
+    @event = Event.new
+    @events = Event.all
   end
 
   def create
