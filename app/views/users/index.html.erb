@@ -24,7 +24,7 @@
 	<% @users.each do |user| %>
 		<tr>
 			<th> <%= identicon_for user %> </th>
-			<th> <%= link_to user.name, user %> </th>
+			<th> <%= user.name %> </th>
 			<% if current_user.admin? && !current_user?(user) %>
 				<th>
 					<%= link_to "Delete", user, method: :delete, confirm: "Are you sure you want to delete the user?" %>
