@@ -16,6 +16,9 @@
 	<thead>
         <tr>
             <th>Event Title</th>
+            <th>Description</th>
+            <th>Lecturer</th>
+            <th>Faculty</th>
             <th>Date</th>
             <th>Hours</th>
         </tr>
@@ -25,6 +28,9 @@
 		<tr>
 			<% if User.find(attendance.user_id) == current_user %>
 				<th> <%= Event.find_by_code(attendance.code).title %> </th>
+				<th> <%= Event.find_by_code(attendance.code).description %> </th>
+				<th> <%= Event.find_by_code(attendance.code).lecturer %> </th>
+				<th> <%= Event.find_by_code(attendance.code).faculty %> </th>
 				<th> <%= Event.find_by_code(attendance.code).start_time.to_date %> </th>
 				<th> <%= (Event.find_by_code(attendance.code).end_time - Event.find_by_code(attendance.code).start_time)/3600 %> </th>
 			<% end %>
