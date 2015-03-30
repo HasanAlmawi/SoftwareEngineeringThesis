@@ -25,7 +25,9 @@
                     <h4 id="modalTitle" class="modal-title"></h4>
                 </div><br>
                 Faculty: <span id="facEvent"></span><br><br>
-                Code: <span id="eventCode"></span><br><br>
+                <% if current_user.admin? %>
+                  Code: <span id="eventCode"></span><br><br>
+                <% end %>
                 Lecturer: <span id="speaker"></span><br>
                 Start: <span id="startTime"></span><br>
                 End: <span id="endTime"></span><br><br>
@@ -37,6 +39,7 @@
         </div>
     </div>
 
+    <% if current_user.admin? %>
     <div id="eventModal" class="modal fade">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -56,6 +59,7 @@
         </div>
       </div>
     </div>
+    <% end %>
 
     <div id="calendar"></div>
     <div class="modal fade" id="modal"></div>
@@ -63,7 +67,9 @@
     <div class="center hero-unit" align="center">
         <h1>Welcome to the Schulich Round Attendance System</h1>
 
-        <h2>You may sign up or sign in by clicking below.</h2>
+        <h2>
+            You may sign up or sign in by clicking below.
+        </h2>
 
         <%= link_to "Sign Up/Sign In", signup_path, class: "btn btn-large btn-material-lightgreen" %>
     </div>
