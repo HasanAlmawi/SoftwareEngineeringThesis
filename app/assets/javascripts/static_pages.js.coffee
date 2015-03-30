@@ -8,6 +8,7 @@ $(document).ready ->
     eventSources: [
       {
         url: '/events.json',
+        borderColor: 'purple',
         color: 'purple',
         textColor: 'white'
       }

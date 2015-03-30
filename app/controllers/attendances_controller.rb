@@ -3,6 +3,13 @@ class AttendancesController < ApplicationController
   	@attendance = Attendance.new
   end
 
+  def show
+    @attendance = Attendance.find(params[:id])
+  end
+
+  def edit
+  end
+
   def create
   	user = User.where(email: params[:attendance][:email]).first
     event = Event.where(code: params[:attendance][:code]).first
@@ -31,11 +38,18 @@ class AttendancesController < ApplicationController
   end
 
   def index
-    @attendances = Attendance.order(:code)
-    respond_to do |format|
-      format.html
-      format.csv { send_data @attendances.to_csv }
-      format.xls { send_data @attendances.to_csv(col_sep: "\t") }
-    end    
+    @attendances = Attendance.all
   end
+
+  def temp
+   
+  end
+  # def index
+  #   @attendances = Attendance.order(:code)
+  #   respond_to do |format|
+  #     format.html
+  #     format.csv { send_data @attendances.to_csv }
+  #     format.xls { send_data @attendances.to_csv(col_sep: "\t") }
+  #   end    
+  # end
 end
