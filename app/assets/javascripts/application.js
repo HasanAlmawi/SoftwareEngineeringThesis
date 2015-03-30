@@ -16,4 +16,3 @@
 //= require bootstrap
 //= require moment
 //= require fullcalendar
-//= require static_pages
