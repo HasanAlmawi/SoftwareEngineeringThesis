@@ -37,7 +37,6 @@ $(document).ready ->
       g = (hash & 0x00FF00) >> 8
       b = hash & 0x0000FF
       element.css('background-color', "#" + ("0" + r.toString(16)).substr(-2) + ("0" + g.toString(16)).substr(-2) + ("0" + b.toString(16)).substr(-2));
-
       element.attr 'href', 'javascript:void(0);'
       element.click ->
         $('#eventCode').html event.code
