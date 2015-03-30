@@ -41,9 +41,6 @@ class AttendancesController < ApplicationController
     @attendances = Attendance.all
   end
 
-  def temp
-   
-  end
   # def index
   #   @attendances = Attendance.order(:code)
   #   respond_to do |format|
