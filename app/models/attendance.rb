@@ -7,9 +7,11 @@ class Attendance < ActiveRecord::Base
 
   def self.to_csv (options = {})
   	CSV.generate(options) do |csv|
-  		csv << column_names
+  		csv << ["Email", "Event Title", "Description", "Lecturer", "Faculty", "Date", "Hours"]
   		all.each do |attendance|
-  			csv << attendance.attributes.values_at(*column_names)
+        csv << [User.find(attendance.user_id).email, Event.find_by_code(attendance.code).title, Event.find_by_code(attendance.code).description, 
+          Event.find_by_code(attendance.code).lecturer, Event.find_by_code(attendance.code).faculty, Event.find_by_code(attendance.code).start_time.to_date,
+           (Event.find_by_code(attendance.code).end_time - Event.find_by_code(attendance.code).start_time)/3600]
   		end
   	end
   end

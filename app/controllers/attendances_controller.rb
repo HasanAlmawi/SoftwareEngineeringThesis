@@ -38,15 +38,11 @@ class AttendancesController < ApplicationController
   end
 
   def index
-    @attendances = Attendance.all
+    @attendances = Attendance.order(:code)
+    respond_to do |format|
+      format.html
+      format.csv { send_data @attendances.to_csv }
+      format.xls { send_data @attendances.to_csv(col_sep: "\t") }
+    end
   end
-
-  # def index
-  #   @attendances = Attendance.order(:code)
-  #   respond_to do |format|
-  #     format.html
-  #     format.csv { send_data @attendances.to_csv }
-  #     format.xls { send_data @attendances.to_csv(col_sep: "\t") }
-  #   end    
-  # end
 end
