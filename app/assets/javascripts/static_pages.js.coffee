@@ -42,7 +42,7 @@ $(document).ready ->
       element.click ->
         $('#eventCode').html event.code
         $('#speaker').html event.lecturer
-        $('#facEvent').html event.faculty
+        $('#departmentEvent').html event.faculty
         $('#modalTitle').html event.title
         $('#modalBody').html event.description
         $('#startTime').html moment(event.start).format('MMM Do h:mm A')

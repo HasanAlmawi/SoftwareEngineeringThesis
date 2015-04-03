@@ -37,6 +37,7 @@ class EventsController < ApplicationController
   end
 
   def destroy
+    @event.destroy
     Attendance.find(params[:code]).destroy
   end
 end
