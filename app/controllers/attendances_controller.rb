@@ -18,7 +18,7 @@ class AttendancesController < ApplicationController
       if event
         @attendance = user.attendances.build(params[:attendance].except(:email))  	
     	  if @attendance.save
-          flash[:success] = "Attendance logged."
+          flash[:success] = "Attendance logged for event: " + Event.find_by_code(params[:attendance][:code]).title
     		  redirect_to root_path
         else
           render 'new'

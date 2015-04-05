@@ -7,13 +7,16 @@ class EventsController < ApplicationController
     respond_with(@events)
   end
 
+  def list
+    @events = Event.all
+  end
+
   def new
   	@event = Event.new
   end
 
   def edit
     @event = Event.new
-    @events = Event.all
   end
 
   def create
@@ -32,12 +35,14 @@ class EventsController < ApplicationController
       flash[:success] = "Event updated"
       redirect_to root_path
     else
-      render 'new'
+      render 'edit'
     end
   end
 
   def destroy
-    @event.destroy
-    Attendance.find(params[:code]).destroy
+    Event.find(params[:id]).destroy
+    flash[:success] = "Event removed."
+    redirect_to root_path
   end
+
 end

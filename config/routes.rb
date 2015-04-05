@@ -12,6 +12,8 @@ Schulich::Application.routes.draw do
   match '/signup', to: 'users#new'
   match '/edit', to: 'users#edit'
   
+  match '/listevents', to: 'events#list'
+
   match '/register', to: 'attendances#new'
 
   match '/signin', to: 'sessions#new'
