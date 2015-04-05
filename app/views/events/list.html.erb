@@ -16,7 +16,7 @@
 	<thead>
         <tr>
             <th>Title</th>
-            <th>Code</th>
+            <th>Date</th>
             <th>Edit</th>
             <th>Delete</th>
         </tr>
@@ -25,7 +25,7 @@
 	<% @events.each do |event| %>
 		<tr>
 			<th> <%= event.title %> </th>
-			<th> <%= event.code %> </th>
+			<th> <%= event.start_time.to_date %> </th>
 			<th>
 				<%= link_to "Edit", edit_event_path(event) %>
 			</th>

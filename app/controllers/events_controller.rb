@@ -8,7 +8,7 @@ class EventsController < ApplicationController
   end
 
   def list
-    @events = Event.all
+    @events = Event.order(:start_time)
   end
 
   def new
